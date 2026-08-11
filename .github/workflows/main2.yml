@@ -1,4 +1,4 @@
-name: Fastjson2 CI (JDK 8 & 17)main2.2
+name: Fastjson2 CI (JDK 8 & 17)main2.3
 
 on:
   push:
@@ -37,4 +37,17 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: fastjson2-jdk-${{ matrix.java }}
-          path: core/target/*.jar
+          path: |
+            core/target/*.jar
+            extension/target/*.jar
+            benchmark/target/*.jar
+            extension-solon/target/*.jar
+            extension-spring5/target/*.jar
+            extension-jaxrs-javax/target/*.jar
+            fastjson1-compatible/target/*.jar
+            kotlin/target/*.jar
+            codegen/target/*.jar
+            codegen-test/target/*.jar
+            safemode-test/target/*.jar
+            example-solon-test/target/*.jar
+            example-spring-test/target/*.jar
