@@ -32,3 +32,9 @@ jobs:
 
       - name: Build Fastjson2
         run: ./mvnw -V --no-transfer-progress -DskipTests clean package
+
+      - name: Upload JAR Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fastjson2-jdk-${{ matrix.java }}
+          path: target/*.jar
