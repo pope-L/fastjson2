@@ -37,4 +37,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: fastjson2-jdk-${{ matrix.java }}
-          path: fastjson2/target/*.jar
+          path: fastjson2/fastjson2/target/*.jar
